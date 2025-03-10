@@ -4,26 +4,29 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <title>Sequentia</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   </head>
   <body>
     <header class="fixed top-0 left-0 w-full">
       <nav class="bg-white shadow-md rounded-xl m-4 p-3 flex items-center justify-between px-6">
-        <!-- Logo -->
-        <div>
-          <img src="img/logo-sequentia.jpg" alt="Sequentia_Logo" class="h-6"> 
-        </div>
-        <!-- Links -->
-        <ul class="flex space-x-24 text-gray-700">
-          <li><a href="#" class="hover:text-blue-900 mt-10 font-semibold text-[20px]">Esquelas</a></li>
-          <li><a href="#" class="hover:text-blue-900 mt-10 font-semibold text-[20px]">Testamento social</a></li>
-          <li><a href="#" class="hover:text-blue-900 mt-10 font-semibold text-[20px]">Blog</a></li>
-          <li><a href="#" class="hover:text-blue-900 mt-10 font-semibold text-[20px]">Comunidad</a></li>
-        </ul>
-        <!-- Iconos -->
-        <section class="flex items-center space-x-4">
+          <!-- Logo -->
+          <div>
+              <img src="img/logo-sequentia.jpg" alt="Sequentia_Logo" class="h-6"> 
+          </div>
+          <p>Otra prueba</p>
+          <!-- Links -->
+          <ul class="flex space-x-6 text-gray-700">
+              <li><a href="#" class="hover:text-blue-600">Nosotros</a></li>
+              <li><a href="#" class="hover:text-blue-600">Esquelas</a></li>
+              <li><a href="#" class="hover:text-blue-600">Testamento social</a></li>
+              <li><a href="#" class="hover:text-blue-600">Blog</a></li>
+              <li><a href="#" class="hover:text-blue-600">Comunidad</a></li>
+          </ul>
+          
+           <!-- Iconos -->
+      <div class="flex items-center space-x-4">
           <!-- Icono de usuario -->
           <a href="/perfil" class="flex items-center space-x-2"> <!--viewBox = Define las dimensiones del área | stroke-width = Define el grosor del trazo del SVG | stroke = Especifica el color del trazo del gráfico-->
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-600">
@@ -180,42 +183,35 @@
     </main>
   
          <!-- Footer -->
-          <footer class="relative text-center text-gray-700 mb-10">
-          <!-- <div class="bg-gray-100 bg-opacity-90 py-10">
-            <div class="max-w-3xl mx-auto px-6 bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-                <h2 class="text-left text-lg font-bold mb-4">Por qué elegir Sequentia:</h2> -->
-               <!--Lista-->
-                <!-- <ul class="list-disc list-inside m-2 text-left space-y-2">
-                    <li class="tems-start ">
-                        <span class="font-semibold">Seguridad y confidencialidad</span> garantizadas.
-                    </li>
-                    <li class="items-start">
-                        Acceso <span class="font-semibold">fácil y flexible</span> para actualizar tus decisiones.
-                    </li>
-                    <li class="items-start">
-                        Un equipo comprometido con el <span class="font-semibold">respeto y la sensibilidad</span> en cada paso.
-                    </li>
-                </ul>
-                <p class="text-left mt-10 text-sm">En Sequentia, te ayudamos a crear un legado que perdure y a asegurarte de que tus deseos se cumplan, siempre con el respeto y la privacidad que mereces.</p>
-            </div> 
-           -->
-            <div class="flex justify-center items-center mt-10">
-                <img src="img\logo-sequentia.png" class="h-10 " alt="Sequentia_Logo"> 
+         <footer class="relative text-center text-gray-700 mb-10">
+          <div class="flex justify-center items-center mt-10">
+            <img src="img/logo-sequentia.png" class="h-10" alt="Sequentia_Logo"> 
+          </div>
+        
+          <div>
+            <p class="text-xs uppercase tracking-widest text-blue-900">ANYTIME, ANYWHERE</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <!--Redes sociales-->
+                <a href="#" class="flex items-center justify-center w-10 h-10 border-2 rounded-full hover:text-gray-900">
+                    <i class="fab fa-linkedin text-xl"></i>
+                </a>
+                <a href="#" class="flex items-center justify-center w-10 h-10 border-2 rounded-full hover:text-gray-900">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a href="#" class="flex items-center justify-center w-10 h-10 border-2 rounded-full hover:text-gray-900">
+                    <i class="fab fa-tiktok text-xl"></i>
+                </a>
             </div>
-              <div class="">
-                <p class="text-xs uppercase tracking-widest text-blue-900">ANYTIME, ANYWHERE</p><!--(tracking-wide y widest) Ajustan el espaciado entre letras para mejorar la legibilidad del texto.-->
-                <div class="flex justify-center space-x-6 mt-4  ">
-                    <a href="#" class="p-3 bg-transparent border-2 border-grey-600 rounded-full hover:text-gray-900"><i class="fab fa-linkedin text-xl"></i></a> <!--fab fa-linkedin = fuente de iconos-->
-                    <a href="#" class="p-3 bg-transparent border-2 border-grey-600 rounded-full hover:text-gray-900"><i class="fab fa-instagram text-xl"></i></a>
-                    <a href="#" class="p-3 bg-transparent border-2 border-grey-600 rounded-full hover:text-gray-900"><i class="fab fa-tiktok text-xl"></i></a>
-                </div>
-            </div>
-            <div class="mt-6 text-gray-500 text-xs">
-                <p>&copy; 2024, Sequentia Solutions S.L. <a href="#" class="underline">Términos y condiciones</a> - <a href="#" class="underline">Política de privacidad</a> - <a href="#" class="underline">Política de cookies</a></p>
-                <!--Underline = aplica un subrayado al texto dentro del elemento-->
-              </div>
-        </div>
-    </footer>
+          </div>
+        
+          <div class="mt-6 text-gray-500 text-xs">
+            <p>&copy; 2024, Sequentia Solutions S.L. 
+              <a href="#" class="underline">Términos y condiciones</a>  
+              <a href="#" class="underline">Política de privacidad</a> 
+              <a href="#" class="underline">Política de cookies</a>
+            </p>
+          </div>
+        </footer>
     
   
     <script type="module" src="/src/main.tsx"></script>
