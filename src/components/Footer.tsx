@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Footer(){
     return(
         <>
@@ -24,9 +26,9 @@ export default function Footer(){
           
             <div className="mt-6 text-gray-500 text-xs">
               <p>&copy; 2024, Sequentia Solutions S.L. 
-                <a href="#" className="underline">Términos y condiciones</a>  
-                <a href="#" className="underline">Política de privacidad</a> 
-                <a href="#" className="underline">Política de cookies</a>
+                <Link to="/Terms" className="underline">Términos y condiciones -</Link>
+                <Link to="/Privacy" className="underline"> Política de privacidad -</Link>  
+                <a href="#" className="underline"> Política de cookies</a>
               </p>
             </div>
             </footer>

@@ -12,9 +12,9 @@ export default function Header(){
                     <p>Otra prueba</p>
                 
                     <ul className="flex space-x-6 text-gray-700">
-                        <li><a href="#" className="hover:text-blue-600">Nosotros</a></li>
-                        <li><Link to="/Esquelas">Esquelas</Link></li>
-                        <li><a href="#" className="hover:text-blue-600">Testamento social</a></li>
+                        <li><Link to="/" className="hover:text-blue-600">Nosotros</Link></li>
+                        <li><Link to="/Esquelas" className="hover:text-blue-600">Esquelas</Link></li>
+                        <li><Link to="/TestamentoSocial" className="hover:text-blue-600">Testamento</Link></li>
                         <li><a href="#" className="hover:text-blue-600">Blog</a></li>
                         <li><a href="#" className="hover:text-blue-600">Comunidad</a></li>
                     </ul>
