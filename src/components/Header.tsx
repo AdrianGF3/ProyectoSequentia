@@ -15,7 +15,7 @@ export default function Header(){
                         <li><Link to="/" className="hover:text-blue-600">Nosotros</Link></li>
                         <li><Link to="/Esquelas" className="hover:text-blue-600">Esquelas</Link></li>
                         <li><Link to="/TestamentoSocial" className="hover:text-blue-600">Testamento</Link></li>
-                        <li><a href="#" className="hover:text-blue-600">Blog</a></li>
+                        <li><Link to="https://sequentia.app/blog/bienvenido/" className="hover:text-blue-600">Blog</Link></li>
                         <li><a href="#" className="hover:text-blue-600">Comunidad</a></li>
                     </ul>
                     
