@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 export default function Footer(){
     return(
         <>
-            <footer className="relative text-center text-gray-700 mb-10">
-            <div className="flex justify-center items-center mt-10">
+            <footer className="relative text-center text-gray-700 pb-10 dark:text-black dark:bg-white">
+            <div className="flex justify-center items-center pt-10">
               <img src="img/logo-sequentia.png" className="h-10" alt="Sequentia_Logo"/> 
             </div>
           
