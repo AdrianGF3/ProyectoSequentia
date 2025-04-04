@@ -16,14 +16,14 @@ export default function Header(){
                         <li><Link to="/Esquelas" className="hover:text-blue-600">Esquelas</Link></li>
                         <li><Link to="/TestamentoSocial" className="hover:text-blue-600">Testamento</Link></li>
                         <li><Link to="https://sequentia.app/blog/bienvenido/" className="hover:text-blue-600">Blog</Link></li>
-                        <li><a href="#" className="hover:text-blue-600">Comunidad</a></li>
+                        <li><Link to="/Comunidad" className="hover:text-blue-600">Comunidad</Link></li>
                     </ul>
                     
                     <div className="flex items-center space-x-4">
                         
                         <a href="/perfil" className="flex items-center space-x-2"> 
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6 text-gray-600">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 7.5A3.75 3.75 0 1 1 12 3.75a3.75 3.75 0 0 1 3.75 3.75zM18.75 21a7.5 7.5 0 1 0-13.5 0"></path>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 text-gray-600">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 7.5A3.75 3.75 0 1 1 12 3.75a3.75 3.75 0 0 1 3.75 3.75zM18.75 21a7.5 7.5 0 1 0-13.5 0"></path>
                         </svg>
                         </a>
                     
