@@ -2,8 +2,8 @@ export default function TestamenoSocial() {
     return (
         <>
         <div className="min-h-screen bg-[linear-gradient(to_bottom,rgba(255,255,255,0),rgb(245,245,245)_80%),url('/img/photo-1548266652-99cf27701ced.jpeg')] bg-cover bg-center bg-no-repeat">
-            <main>
-                <div className="ml-10 mt-32">
+            <main className="pt-20">
+                <div className="ml-10 mt-20">
                     <section className="text-left mb-8">
                         <h2 className="text-sky-950 text-lg font-semibold">TU LEGADO DIGITAL Y PERSONAL EN BUENAS MANOS</h2>
                         <h3 className="text-3xl font-bold text-black mt-5">Testamento social</h3>

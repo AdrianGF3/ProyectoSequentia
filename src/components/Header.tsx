@@ -14,11 +14,11 @@ const Header = () => {
 
                     {/* Menú principal visible en pantallas grandes */}
                     <ul className="hidden md:flex space-x-6 text-gray-700 text-base font-semibold">
-                        <li><Link to="/" className="hover:text-blue-600">Nosotros</Link></li>
-                        <li><Link to="/Esquelas" className="hover:text-blue-600">Esquelas</Link></li>
-                        <li><Link to="/TestamentoSocial" className="hover:text-blue-600">Testamento</Link></li>
-                        <li><Link to="https://sequentia.app/blog/bienvenido/" className="hover:text-blue-600">Blog</Link></li>
-                        <li><Link to="/Comunidad" className="hover:text-blue-600">Comunidad</Link></li>
+                        <li><Link to="/" className="text-black hover:text-blue-600">Nosotros</Link></li>
+                        <li><Link to="/Esquelas" className="text-black hover:text-blue-600">Esquelas</Link></li>
+                        <li><Link to="/TestamentoSocial" className="text-black hover:text-blue-600">Testamento</Link></li>
+                        <li><Link to="https://sequentia.app/blog/bienvenido/" className="text-black hover:text-blue-600">Blog</Link></li>
+                        <li><Link to="/Comunidad" className="text-black hover:text-blue-600">Comunidad</Link></li>
                     </ul>
 
                     {/* Botón del menú hamburguesa visible en pantallas pequeñas */}

@@ -3,8 +3,8 @@ export default function Esquelas() {
         <>
         <div className="bg-cover bg-center bg-no-repeat min-h-screen 
             bg-[linear-gradient(to_bottom,rgba(255,255,255,0),rgb(245,245,245)_80%),url('img/pexels-arina-krasnikova-7002929.jpg')] bg-cover bg-center bg-no-repeat">
-            <main>
-                <div className="ml-10 mt-32">
+            <main className="p-20">
+                <div className="ml-10 mt-20">
                     <section className="text-left mb-8">
                         <h2 className="text-sky-950 text-lg font-semibold">HOMENAJES QUE PERDURAN EN EL TIEMPO</h2>
                         <h3 className="text-3xl font-bold text-black">Esquelas</h3>
