@@ -1,6 +1,7 @@
 export default function TestamenoSocial() {
     return (
         <>
+        <div className="min-h-screen bg-[linear-gradient(to_bottom,rgba(255,255,255,0),rgb(245,245,245)_80%),url('/img/photo-1548266652-99cf27701ced.jpeg')] bg-cover bg-center bg-no-repeat">
             <main>
                 <div className="ml-10 mt-32">
                     <section className="text-left mb-8">
@@ -66,7 +67,7 @@ export default function TestamenoSocial() {
                                 para activar tus instrucciones.
                             </p>
                         </div>
-                    </div>
+                    </div>                  
                 </section>
 
                 <section className="bg-white flex justify-start gap-6 min-h-24 pt-24 mt-48" >
@@ -103,9 +104,9 @@ export default function TestamenoSocial() {
                         <div className="absolute inset-0 bg-white opacity-50 z-0"></div>
 
                         <div className="relative z-10 py-10">
-                            <div className="max-w-1/3 ml-10 mr-10 mt-10 mb-10 mx-auto px-6 bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+                            <div className="max-w-1/3 ml-10 mr-10 mt-10 mb-10 mx-auto px-6 bg-white p-6 h-96 rounded-lg shadow-lg border border-gray-200">
                                 <div className="flex justify-between items-center mb-4">
-                                    <h2 className="text-left text-lg font-bold">Por qué elegir Sequentia:</h2>
+                                    <h2 className="text-left text-2xl font-bold mt-10">Por qué elegir Sequentia:</h2>
                                 </div>
 
                                 <ul className="list-disc list-inside m-2 text-left space-y-2">
@@ -120,19 +121,20 @@ export default function TestamenoSocial() {
                                     </li>
                                 </ul>
                                 <p className="text-left mt-10 text-sm">
-                                    En Sequentia, te ayudamos a crear un legado que perdure y a asegurarte de que tus deseos se cumplan, siempre con el respeto y la privacidad que mereces.
+                                    En Sequentia, te ayudamos a crear un legado que perdure y a asegurarte de que tus<br></br> deseos se cumplan, siempre con el respeto y la privacidad que mereces.
                                 </p>
 
-                                <div className="relative flex ml-auto">
-                                    <img src="img/icon-sequentia.png" alt="Icono Sequentia" className="h-full" />
+                                <div className="relative flex ml-auto ">
+                                    <img src="img/icon-sequentia.png" alt="Icono Sequentia" className="absolute right-0 transform 
+                                    -translate-y-1/2 h-auto w-[570px] max-w-full opacity-40 pb-80 mt-6 pointer-events-none" />
                                 </div>
 
                             </div>
                         </div>
                     </div>
                 </section>
-
-            </main>
+            </main> 
+            </div>
         </>
     );
 } 

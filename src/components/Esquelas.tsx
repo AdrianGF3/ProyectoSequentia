@@ -1,6 +1,8 @@
 export default function Esquelas() {
     return (
         <>
+        <div className="bg-cover bg-center bg-no-repeat min-h-screen 
+            bg-[linear-gradient(to_bottom,rgba(255,255,255,0),rgb(245,245,245)_80%),url('img/pexels-arina-krasnikova-7002929.jpg')] bg-cover bg-center bg-no-repeat">
             <main>
                 <div className="ml-10 mt-32">
                     <section className="text-left mb-8">
@@ -64,6 +66,7 @@ export default function Esquelas() {
                     </section>
                 </div>
             </main>
+            </div>
         </>
     );
 } 
