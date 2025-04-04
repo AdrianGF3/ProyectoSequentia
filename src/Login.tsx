@@ -24,7 +24,7 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="bg-[url(/img/backgroundFigma.png)] bg-cover bg-center backdrop-blur-md flex justify-center items-center min-h-screen w-full">
+    <div className="dark:text-black dark:bg-gray-200 bg-[url(/img/backgroundFigma.png)] bg-cover bg-center backdrop-blur-md flex justify-center items-center min-h-screen w-full">
       <div className="bg-white rounded-xl p-8 flex flex-col items-center">
         <img src="img/logo-sequentia.png" alt="" className="mb-12 w-[300px]" />
         <h2 className="text-2xl font-extrabold text-center text-gray-700 text-[#104A67] mb-6">Inicio de sesión</h2>
