@@ -98,37 +98,32 @@ export default function TestamenoSocial() {
                     </div>
                 </section>
 
-                <section className="relative text-center text-gray-700">
-                    <div className="relative bg-cover bg-center py-10 bg-white" style={{ backgroundImage: "url('img/photo-1548266652-99cf27701ced.jpeg')" }}>
+                <section className=" text-center text-gray-700">
+                    <div className=" bg-cover bg-center py-10 bg-white" style={{ backgroundImage: "url('img/photo-1548266652-99cf27701ced.jpeg')" }}>
 
-                        <div className="absolute inset-0 bg-white opacity-50 z-0"></div>
-
-                        <div className="relative z-10 py-10">
-                            <div className="max-w-1/3 ml-10 mr-10 mt-10 mb-10 mx-auto px-6 bg-white p-6 h-96 rounded-lg shadow-lg border border-gray-200">
-                                <div className="flex justify-between items-center mb-4">
-                                    <h2 className="text-left text-2xl font-bold mt-10">Por qué elegir Sequentia:</h2>
+                        <div className="">
+                            <div className="flex m-10 bg-white rounded-lg shadow-lg border border-gray-200">
+                                <div className="w-1/2 p-10">
+                                    <div className="flex justify-between items-center">
+                                        <h2 className="text-left text-2xl font-bold">Por qué elegir Sequentia:</h2>
+                                    </div>
+                                    <ul className="list-disc list-inside text-left space-y-2 mt-10">
+                                        <li className="items-start">
+                                            <span className="font-semibold">Seguridad y confidencialidad</span> garantizadas.
+                                        </li>
+                                        <li className="items-start">
+                                            Acceso <span className="font-semibold">fácil y flexible</span> para actualizar tus decisiones.
+                                        </li>
+                                        <li className="items-start">
+                                            Un equipo comprometido con el <span className="font-semibold">respeto y la sensibilidad</span> en cada paso.
+                                        </li>
+                                    </ul>
+                                    <p className="text-left mt-10 text-sm">
+                                        En Sequentia, te ayudamos a crear un legado que perdure y a asegurarte de que tus<br></br> deseos se cumplan, siempre con el respeto y la privacidad que mereces.
+                                    </p>
                                 </div>
-
-                                <ul className="list-disc list-inside m-2 text-left space-y-2">
-                                    <li className="items-start">
-                                        <span className="font-semibold">Seguridad y confidencialidad</span> garantizadas.
-                                    </li>
-                                    <li className="items-start">
-                                        Acceso <span className="font-semibold">fácil y flexible</span> para actualizar tus decisiones.
-                                    </li>
-                                    <li className="items-start">
-                                        Un equipo comprometido con el <span className="font-semibold">respeto y la sensibilidad</span> en cada paso.
-                                    </li>
-                                </ul>
-                                <p className="text-left mt-10 text-sm">
-                                    En Sequentia, te ayudamos a crear un legado que perdure y a asegurarte de que tus<br></br> deseos se cumplan, siempre con el respeto y la privacidad que mereces.
-                                </p>
-
-                                <div className="relative flex ml-auto ">
-                                    <img src="img/icon-sequentia.png" alt="Icono Sequentia" className="absolute right-0 transform 
-                                    -translate-y-1/2 h-auto w-[570px] max-w-full opacity-40 pb-80 mt-6 pointer-events-none" />
+                                <div className="justify-end -m-10 opacity-40 flex justify-center items-center" style={{ backgroundImage: "url('img/icon-sequentia.png')" }}>
                                 </div>
-
                             </div>
                         </div>
                     </div>

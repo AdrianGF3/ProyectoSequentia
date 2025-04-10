@@ -12,6 +12,7 @@ import Terms from './components/Terms.tsx';
 import Privacy from './components/Privacy.tsx';
 import Login from './Login.tsx';
 import Comunidad from './components/Comunidad.tsx';
+import Proximamente from './components/Proximamente.tsx';
 
 function AppContent() {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
@@ -42,6 +43,9 @@ function AppContent() {
         <Route path="/TestamentoSocial" element={<TestamentoSocial />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/privacy" element={<Privacy />} />
+        <Route path="/proximamente" element={<Proximamente />} />
+
+        {/* Ruta de comunidad que requiere autenticación */}
 
         {/* Ruta protegida: solo accesible si el usuario está autenticado */}
         <Route

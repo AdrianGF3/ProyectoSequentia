@@ -18,7 +18,7 @@ const Header = () => {
                         <li><Link to="/Esquelas" className="text-black hover:text-blue-600">Esquelas</Link></li>
                         <li><Link to="/TestamentoSocial" className="text-black hover:text-blue-600">Testamento</Link></li>
                         <li><Link to="https://sequentia.app/blog/bienvenido/" className="text-black hover:text-blue-600">Blog</Link></li>
-                        <li><Link to="/Comunidad" className="text-black hover:text-blue-600">Comunidad</Link></li>
+                        <li><Link to="/Proximamente" className="text-black hover:text-blue-600">Comunidad</Link></li>
                     </ul>
 
                     {/* Botón del menú hamburguesa visible en pantallas pequeñas */}
@@ -38,7 +38,7 @@ const Header = () => {
                             <Link to="/Esquelas" className="hover:text-blue-600" onClick={() => setMenuOpen(false)}>Esquelas</Link>
                             <Link to="/TestamentoSocial" className="hover:text-blue-600" onClick={() => setMenuOpen(false)}>Testamento</Link>
                             <Link to="https://sequentia.app/blog/bienvenido/" className="hover:text-blue-600" onClick={() => setMenuOpen(false)}>Blog</Link>
-                            <Link to="/Comunidad" className="hover:text-blue-600" onClick={() => setMenuOpen(false)}>Comunidad</Link>
+                            <Link to="/Proximamente" className="hover:text-blue-600" onClick={() => setMenuOpen(false)}>Comunidad</Link>
                         </div>
                     )}
 
