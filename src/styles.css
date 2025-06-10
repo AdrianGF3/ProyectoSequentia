@@ -1,0 +1,592 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-image: 
+        linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%),
+        url('images/background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+
+.app-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(238, 238, 238, 0.5);
+}
+
+/* .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #003366;
+    text-decoration: none;
+} */
+
+.logo a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.logo a img {
+    height: 40px; 
+    width: auto;  
+    display: block;
+}
+
+.main-nav {
+    margin-left: 40px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-right: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.user-controls {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.avatar-small {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-image: url('images/background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.flag {
+    margin-right: 5px;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-top: 100px;
+    display: flex;
+    min-height: calc(100vh - 70px);
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    padding: 30px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-right: 1px solid rgba(238, 238, 238, 0.5);
+}
+
+.user-profile {
+    margin-bottom: 30px;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    text-align: center;     
+}
+
+/* .avatar-large {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ccc;
+    flex-shrink: 0;
+} */
+
+.avatar-large {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-image: url('images/pngegg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.user-info {
+    flex: 1;
+}
+
+.user-profile h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.email {
+    font-size: 14px;
+    color: #666;
+}
+
+.profile-nav ul {
+    list-style: none;
+}
+
+.profile-nav li {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.profile-nav li:hover {
+    background-color: rgba(240, 240, 240, 0.7);
+}
+
+.profile-nav li.active {
+    background-color: rgba(240, 240, 240, 0.7);
+    font-weight: 500;
+}
+
+.profile-nav i {
+    margin-right: 15px;
+    width: 20px;
+    text-align: center;
+    color: #003366;
+}
+
+/* Content Area Styles */
+.content-area {
+    flex: 1;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.section-content {
+    display: none;
+}
+
+.section-content.active {
+    display: block;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #003366;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 25px 0 15px;
+    color: #003366;
+}
+
+.subtitle {
+    font-size: 16px;
+    font-weight: normal;
+    color: #666;
+}
+
+p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.divider {
+    height: 1px;
+    background-color: rgba(238, 238, 238, 0.8);
+    margin: 25px 0;
+}
+
+/* Form Styles */
+.form-section {
+    max-width: 800px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #003366;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: white;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #003366;
+}
+
+.input-row {
+    display: flex;
+    gap: 15px;
+}
+
+.input-row .form-input {
+    flex: 1;
+}
+
+.medium {
+    max-width: 300px;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper::after {
+    content: '▼';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 12px;
+    color: #666;
+}
+
+.form-select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    appearance: none;
+    background-color: white;
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: #003366;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #002244;
+}
+
+.btn-secondary {
+    background-color: #f0c14b;
+    color: #333;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.btn-secondary:hover {
+    background-color: #e6b325;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #003366;
+    border: 1px solid #003366;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-outline:hover {
+    background-color: #003366;
+    color: white;
+}
+
+.btn-outline-gray {
+    background-color: #e0e0e0;
+    color: #555;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-text {
+    background: none;
+    border: none;
+    color: #003366;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px;
+    text-decoration: underline;
+}
+
+.btn-text.danger {
+    color: #d9534f;
+}
+
+/* Profile Edit Styles */
+.profile-photo-section {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* .profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #ccc;
+    flex-shrink: 0;
+} */
+
+
+.avatar-large {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-image: url('images/background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-image: url('images/background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 3px solid #e5e7eb;
+    margin-right: 20px;
+}
+.photo-info {
+    flex: 1;
+}
+
+/* Testament Section Styles */
+.contact-form {
+    margin-top: 20px;
+}
+
+.contact-person {
+    margin-bottom: 20px;
+}
+
+/* Subscription Styles */
+.subscription-cards {
+    display: flex;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.subscription-card {
+    flex: 1;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f0c14b;
+    margin: 15px 0;
+}
+
+.price.premium {
+    color: #4285f4;
+}
+
+.highlight {
+    color: #f0c14b;
+    font-weight: 500;
+}
+
+.contact-info {
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.contact-info a {
+    color: #003366;
+    text-decoration: none;
+}
+
+/* Transactions Styles */
+.transactions-table {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.transaction {
+    display: flex;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.transaction:last-child {
+    border-bottom: none;
+}
+
+.transaction div {
+    flex: 1;
+}
+
+.amount {
+    text-align: right;
+    font-weight: 500;
+}
+
+/* Payment Methods Styles */
+.payment-methods {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.add-payment {
+    width: 300px;
+    height: 180px;
+    border: 2px dashed #ddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.add-payment:hover {
+    border-color: #003366;
+}
+
+.add-icon {
+    font-size: 30px;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.card-display {
+    width: 300px;
+}
+
+.card-content {
+    height: 180px;
+    background-color: #ffeb99;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-brand {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.card-number {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.card-expiry {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.card-holder {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    font-size: 12px;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.profile-nav ul li[data-section="suscripciones"] img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+
+.section-content {
+  display: none;
+}
+
+.section-content.active {
+  display: block;
+}
+

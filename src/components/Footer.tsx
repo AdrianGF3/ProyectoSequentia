@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <>
       <footer className="relative text-center text-gray-700 pb-10 dark:text-black dark:bg-white">
@@ -27,9 +31,9 @@ export default function Footer() {
 
         <div className="mt-6 text-gray-500 text-xs">
           <p>&copy; 2024, Sequentia Solutions S.L.
-            <Link to="/Terms" className="underline">Términos y condiciones -</Link>
-            <Link to="/Privacy" className="underline"> Política de privacidad -</Link>
-            <a href="#" className="underline"> Política de cookies</a>
+            <Link to="/Terms" className="underline">{t('foter.ter')}</Link>
+            <Link to="/Privacy" className="underline">{t('foter.pri')}</Link>
+            <a href="#" className="underline">{t('foter.coo')}</a>
           </p>
         </div>
       </footer>

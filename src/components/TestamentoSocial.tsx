@@ -1,16 +1,18 @@
+import { useTranslation } from 'react-i18next';
+
 export default function TestamenoSocial() {
+    const { t } = useTranslation();
+
     return (
         <>
             <div className="min-h-screen bg-[linear-gradient(to_bottom,rgba(255,255,255,0),rgb(245,245,245)_20%),url('/img/photo-1548266652-99cf27701ced.jpeg')]  bg-cover bg-center bg-no-repeat">
                 <main className="pt-20">
                     <div className="ml-10 mt-20">
                         <section className="text-left mb-8">
-                            <h2 className="text-sky-950 text-lg font-semibold">TU LEGADO DIGITAL Y PERSONAL EN BUENAS MANOS</h2>
-                            <h3 className="text-3xl font-bold text-black mt-5">Testamento social</h3>
-                            <p className="mt-4 text-black text-justify mr-10">
-                                En Sequentia, te ayudamos a dejar un mensaje claro y significativo para quienes más te importan. Un Testamento
-                                social es mucho más que un documento. Es una forma de organizar y transmitir tu legado digital, tus deseos personales
-                                y tus mensajes más importantes para tus seres queridos. En Sequentia, hacemos que este proceso sea sencillo y accesible.
+                            <h2 className="text-sky-950 text-lg font-semibold">{t('testamento.01')}</h2>
+                            <h3 className="text-3xl font-bold text-black mt-5">{t('testamento.02')}</h3>
+                            <p className="mt-4 text-black text-justify mr-10">{t('testamento.03')}
+                               
                             </p>
 
                         </section>
@@ -18,7 +20,7 @@ export default function TestamenoSocial() {
 
 
 
-                    <h3 className="text-2xl font-bold text-black ml-10 mt-16">Con nuestros planes personalizados de testamento social, podrás:</h3>
+                    <h3 className="text-2xl font-bold text-black ml-10 mt-16">{t('testamento.04')}</h3>
                     <section className="flex justify-start gap-6 min-h-24 mt-24">
                         <div className="bg-white rounded-lg shadow-lg overflow-hidden w-1/3 h-80 flex flex-col ml-10" >
                             <svg xmlns="http://www.w3.org/2000/svg" className="w-24 mt-26 ml-5 pt-5" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
@@ -26,8 +28,8 @@ export default function TestamenoSocial() {
                             </svg>
                             <div className="p-6 text-center  flex flex-col justify-between">
                                 <hr />
-                                <p className="text-black mt-6 text-left ">
-                                    Dejar mensajes personales que se entregarán a las personas que elijas.
+                                <p className="text-black mt-6 text-left ">{t('testamento.05')}
+                                    
                                 </p>
                             </div>
                         </div>
@@ -38,8 +40,8 @@ export default function TestamenoSocial() {
                             </svg>
                             <div className="p-6 text-center  flex flex-col justify-between">
                                 <hr />
-                                <p className="text-black mt-2 text-left ">
-                                    Instruir sobre la gestión de tus redes sociales ya activos digitales.
+                                <p className="text-black mt-2 text-left ">{t('testamento.06')}
+                                    
                                 </p>
                             </div>
                         </div>
@@ -50,8 +52,8 @@ export default function TestamenoSocial() {
                             </svg>
                             <div className="p-6 text-center  flex flex-col justify-between">
                                 <hr />
-                                <p className="text-black mt-2 text-left ">
-                                    Registrar tus últimas voluntades no legales, como deseos sobre ceremonias, homenajes o recuerdos.
+                                <p className="text-black mt-2 text-left ">{t('testamento.07')}
+                                    
                                 </p>
                             </div>
                         </div>
@@ -62,9 +64,8 @@ export default function TestamenoSocial() {
                             </svg>
                             <div className="p-6 text-center  flex flex-col justify-between">
                                 <hr />
-                                <p className="text-black mt-2 text-left ">
-                                    Seleccionar a tus personas de confianza, quienes podrán notificar a Sequentia en caso de tu fallecimiento
-                                    para activar tus instrucciones.
+                                <p className="text-black mt-2 text-left ">{t('testamento.08')}
+                                    
                                 </p>
                             </div>
                         </div>
@@ -74,26 +75,24 @@ export default function TestamenoSocial() {
                         <div className="rounded-lg shadow-lg overflow-hidden w-1/2 flex flex-col ml-10 mb-24" >
                             <img src="img/pexels-jack-redgate-5855539.jpg" alt="Comunicando" className="w-full h-96 object-cover" />
                             <div className="p-6 text-center flex-1 flex flex-col justify-between">
-                                <h4 className="text-xl font-bold text-black text-left">Flexibilidad</h4>
+                                <h4 className="text-xl font-bold text-black text-left">{t('testamento.09')}</h4>
                                 <hr />
-                                <p className="text-black mt-4 text-left ">
-                                    Cada plan es flexible y se adapta a tus necesidades. Puedes contratarlo fácilmente desde nuestra
-                                    plataforma y actualizarlo cuando lo necesites.
+                                <p className="text-black mt-4 text-left ">{t('testamento.10')}
+                                    
                                 </p>
-                                <button className="mt-4 w-full bg-transparent opacity-70 border border-neutral-430 text-gray-500 py-3 rounded-lg" disabled>Próximamente...</button>
+                                <button className="mt-4 w-full bg-transparent opacity-70 border border-neutral-430 text-gray-500 py-3 rounded-lg" disabled>{t('esquelas.09')}</button>
                             </div>
                         </div>
 
                         <div className="bg-white rounded-lg shadow-lg overflow-hidden w-1/2 flex flex-col mr-10 mb-24">
                             <img src="img/pexels-cottonbro-7236513.jpg" alt="Notificarte" className="w-full h-96 object-cover" />
                             <div className="p-6 text-center flex-1 flex flex-col justify-between">
-                                <h4 className="text-xl font-bold text-black text-left">Personas de confianza</h4>
+                                <h4 className="text-xl font-bold text-black text-left">{t('testamento.11')}</h4>
                                 <hr />
-                                <p className="text-black mt-4 text-left">
-                                    Si eres una persona de confianza de alguien que ha contratado un testamento social, aquí podrás
-                                    notificar a Sequentia sobre su fallecimiento para garantizar que sus instrucciones sean respetadas.
+                                <p className="text-black mt-4 text-left">{t('testamento.12')}
+                                    
                                 </p>
-                                <button className="mt-4 w-full bg-transparent opacity-70 border border-neutral-430 text-gray-500 py-3 rounded-lg" disabled>Próximamente...</button>
+                                <button className="mt-4 w-full bg-transparent opacity-70 border border-neutral-430 text-gray-500 py-3 rounded-lg" disabled>{t('esquelas.09')}</button>
                             </div>
                         </div>
                     </section>
@@ -105,21 +104,21 @@ export default function TestamenoSocial() {
                                 <div className="flex m-10 bg-white rounded-lg shadow-lg border border-gray-200">
                                     <div className="w-1/2 p-10">
                                         <div className="flex justify-between items-center">
-                                            <h2 className="text-left text-2xl font-bold">Por qué elegir Sequentia:</h2>
+                                            <h2 className="text-left text-2xl font-bold">{t('testamento.13')}</h2>
                                         </div>
                                         <ul className="list-disc list-inside text-left space-y-2 mt-10">
                                             <li className="items-start">
-                                                <span className="font-semibold">Seguridad y confidencialidad</span> garantizadas.
+                                                <span className="font-semibold">{t('testamento.14')}</span>{t('testamento.15')}
                                             </li>
                                             <li className="items-start">
-                                                Acceso <span className="font-semibold">fácil y flexible</span> para actualizar tus decisiones.
+                                                {t('testamento.16')}<span className="font-semibold">{t('testamento.17')}</span>{t('testamento.18')}
                                             </li>
                                             <li className="items-start">
-                                                Un equipo comprometido con el <span className="font-semibold">respeto y la sensibilidad</span> en cada paso.
+                                                {t('testamento.19')}<span className="font-semibold">{t('testamento.20')}</span> {t('testamento.21')}
                                             </li>
                                         </ul>
                                         <p className="text-left mt-10 text-sm">
-                                            En Sequentia, te ayudamos a crear un legado que perdure y a asegurarte de que tus<br></br> deseos se cumplan, siempre con el respeto y la privacidad que mereces.
+                                            {t('testamento.22')}<br></br> {t('testamento.23')}
                                         </p>
                                     </div>
                                     <div className="justify-end -m-10 opacity-40 flex justify-center items-center" style={{ backgroundImage: "url('img/icon-sequentia.png')" }}>

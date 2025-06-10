@@ -44,6 +44,9 @@ function AppContent() {
         <Route path="/terms" element={<Terms />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/proximamente" element={<Proximamente />} />
+        <Route path="/comunidad" element={<Comunidad />} />
+
+        {/* Ruta de comunidad que no requiere autenticación */}
 
         {/* Ruta de comunidad que requiere autenticación */}
 

@@ -1,4 +1,4 @@
-// Proximamente.tsx
+// Proximamente.tsx, se utiliza para mostrar una página de "Próximamente" cuando esa pagina aun no la tenemos lista.
 
 export default function Proximamente() {
     return (
