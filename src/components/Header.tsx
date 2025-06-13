@@ -22,7 +22,7 @@ const Header = () => {
         <header className="fixed top-0 left-0 w-full z-50">
             <nav className="bg-white shadow-md rounded-xl m-4 p-3 flex items-center justify-between px-6">
                 <div>
-                    <img src="img/logo-sequentia.jpg" alt="Sequentia_Logo" className="h-6" />
+                    <Link to="/"><img src="img/logo-sequentia.jpg" alt="Sequentia_Logo" className="h-6" /></Link>
                 </div>
 
                 {/* Menú en escritorio */}
@@ -59,11 +59,11 @@ const Header = () => {
 
                 {/* Iconos a la derecha */}
                 <div className="flex items-center space-x-4">
-                    <a href="/perfil" className="flex items-center space-x-2">
+                    <Link to="/Proximamente" className="flex items-center space-x-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 text-gray-600">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 7.5A3.75 3.75 0 1 1 12 3.75a3.75 3.75 0 0 1 3.75 3.75zM18.75 21a7.5 7.5 0 1 0-13.5 0" />
                         </svg>
-                    </a>
+                    </Link>
 
                     {/* Selector de idioma */}
                     <div className="relative">

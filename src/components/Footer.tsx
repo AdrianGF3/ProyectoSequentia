@@ -33,7 +33,7 @@ export default function Footer() {
           <p>&copy; 2024, Sequentia Solutions S.L.
             <Link to="/Terms" className="underline">{t('foter.ter')}</Link>
             <Link to="/Privacy" className="underline">{t('foter.pri')}</Link>
-            <a href="#" className="underline">{t('foter.coo')}</a>
+            <Link to="/Cookies" className="underline">{t('foter.coo')}</Link>
           </p>
         </div>
       </footer>

@@ -10,6 +10,7 @@ import Esquelas from './components/Esquelas.tsx';
 import TestamentoSocial from './components/TestamentoSocial.tsx';
 import Terms from './components/Terms.tsx';
 import Privacy from './components/Privacy.tsx';
+import Cookies from './components/Cookies.tsx';
 import Login from './Login.tsx';
 import Comunidad from './components/Comunidad.tsx';
 import Proximamente from './components/Proximamente.tsx';
@@ -43,6 +44,7 @@ function AppContent() {
         <Route path="/TestamentoSocial" element={<TestamentoSocial />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/privacy" element={<Privacy />} />
+        <Route path="/cookies" element={<Cookies />} />
         <Route path="/proximamente" element={<Proximamente />} />
         <Route path="/comunidad" element={<Comunidad />} />
 
