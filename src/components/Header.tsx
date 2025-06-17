@@ -1,11 +1,23 @@
 import { Link } from 'react-router-dom';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from 'react-i18next';
+import { User, signOut, onAuthStateChanged } from "firebase/auth";
+import { auth } from "../firebaseConfig";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [langMenuOpen, setLangMenuOpen] = useState(false);
+    const [user, setUser] = useState<User | null>(null);
     const { t, i18n } = useTranslation();
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser);
+        });
+        return () => unsubscribe();
+    }, []);
 
     const getFlagSrc = (lang: string): string => {
         switch (lang) {
@@ -15,6 +27,15 @@ const Header = () => {
             case 'ca':
             default:
                 return `/img/${lang}.png`;
+        }
+    };
+
+    const handleLogout = async () => {
+        try {
+            await signOut(auth);
+            navigate("/login");
+        } catch (error) {
+            console.error("Error al cerrar sesión:", error);
         }
     };
 
@@ -31,9 +52,7 @@ const Header = () => {
                     <li><Link to="/Esquelas" className="text-black hover:text-blue-600">{t('menu.obituaries')}</Link></li>
                     <li><Link to="/TestamentoSocial" className="text-black hover:text-blue-600">{t('menu.testament')}</Link></li>
                     <li><Link to="https://sequentia.app/blog/bienvenido/" className="text-black hover:text-blue-600">{t('menu.blog')}</Link></li>
-                    {/* El link de abajo es el de "Comunidad" pero se ha creado una pagina "proximamente" para las paginas aun no terminadas*/}
                     <li><Link to="/Proximamente" className="text-black hover:text-blue-600">{t('menu.community')}</Link></li>
-
                 </ul>
 
                 {/* Botón hamburguesa para móvil */}
@@ -123,6 +142,15 @@ const Header = () => {
                         )}
                     </div>
 
+                    {/* Botón Cerrar sesión solo si usuario logueado */}
+                    {user && (
+                        <button
+                            onClick={handleLogout}
+                            className="py-2 px-4 bg-red-500 text-white rounded hover:bg-red-600 transition"
+                        >
+                            {t('menu.logout', 'Cerrar sesión')}
+                        </button>
+                    )}
                 </div>
             </nav>
         </header>
