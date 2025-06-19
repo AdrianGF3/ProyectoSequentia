@@ -4,8 +4,10 @@ import { auth, analytics } from "../firebaseConfig"; // Importamos auth y analyt
 import { logEvent } from "firebase/analytics"; // Importamos logEvent
 import { Link } from 'react-router-dom';
 import { AuthError } from "firebase/auth"; // Importamos AuthError para manejar errores específicos de autenticación
+import { useTranslation } from 'react-i18next';
 
 const Login: React.FC = () => {
+  const { t } = useTranslation();
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
@@ -35,32 +37,30 @@ const Login: React.FC = () => {
     <div className="dark:text-black dark:bg-gray-200 bg-[url(/img/backgroundFigma.png)] bg-cover bg-center backdrop-blur-md flex justify-center items-center min-h-screen w-full">
       <div className="bg-white rounded-xl p-8 flex flex-col items-center">
         <img src="img/logo-sequentia.png" alt="" className="mb-12 w-[300px]" />
-        <h2 className="text-2xl font-extrabold text-center text-gray-700 text-[#104A67] mb-6">Inicio de sesión</h2>
+        <h2 className="text-2xl font-extrabold text-center text-gray-700 text-[#104A67] mb-6">{t('login.01')}</h2>
 
         {error && <p style={{ color: "red" }}>{error}</p>}
         <form onSubmit={handleLogin} className="flex flex-col items-center">
           <div className="mb-4">
-            <input type="email" placeholder="Correo" onChange={(e) => setEmail(e.target.value)} required
+            <input type="email" placeholder={t('login.02')} onChange={(e) => setEmail(e.target.value)} required
               className="w-[350px] mt-2 px-4 py-2 border rounded-xl border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
           <div className="mb-4">
-            <input type="password" placeholder="Contraseña" onChange={(e) => setPassword(e.target.value)} required
+            <input type="password" placeholder={t('login.03')} onChange={(e) => setPassword(e.target.value)} required
               className="w-[350px] mt-2 px-4 py-2 border rounded-xl border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
           <div className="w-full flex justify-end">
-            <Link to="/recuperar" className="text-[#104A67]">
-              ¿Olvidaste tu contraseña?
-            </Link>
+            <Link to="/recuperar" className="text-[#104A67]">{t('login.04')}</Link>
           </div>
           <button type="submit" className="mb-6 mt-6 font-semibold text-lg py-3 px-20 bg-[#E9D04A] text-[#104A67] hover:bg-blue-700 focus:outline-none 
-              focus:ring-2 rounded-xl focus:ring-blue-500">Ingresar</button>
+              focus:ring-2 rounded-xl focus:ring-blue-500">{t('login.05')}</button>
         </form>
         <div className="mt-4 flex justify-center font-semibold">
-          <p className="text-gray-400">¿No tienes cuenta?</p>
-          <Link to="/registro" className="text-[#104A67] ml-2">Crear una</Link>
+          <p className="text-gray-400">{t('login.06')}</p>
+          <Link to="/registro" className="text-[#104A67] ml-2">{t('login.07')}</Link>
         </div>
       </div>
     </div>

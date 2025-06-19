@@ -3,8 +3,10 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, analytics } from "../firebaseConfig";
 import { logEvent } from "firebase/analytics";
 import { Link, useNavigate } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 const Register: React.FC = () => {
+  const { t } = useTranslation();
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [confirmPassword, setConfirmPassword] = useState<string>("");
@@ -20,17 +22,17 @@ const Register: React.FC = () => {
     setError(null);
 
     if (!acceptedTerms) {
-      setError("Debes aceptar las condiciones para continuar.");
+      setError(t('login.13'));
       return;
     }
 
     if (password !== confirmPassword) {
-      setError("Las contraseñas no coinciden.");
+      setError(t('login.14'));
       return;
     }
 
     if (password.length < 6) {
-      setError("La contraseña debe tener al menos 6 caracteres.");
+      setError(t('login.15'));
       return;
     }
 
@@ -48,25 +50,25 @@ const Register: React.FC = () => {
       if (err.code) {
         switch (err.code) {
           case "auth/email-already-in-use":
-            setError("El correo ya está registrado.");
+            setError(t('login.16'));
             break;
           case "auth/invalid-email":
-            setError("El correo no es válido.");
+            setError(t('login.17'));
             break;
           case "auth/weak-password":
-            setError("La contraseña es demasiado débil (mínimo 6 caracteres).");
+            setError(t('login.18'));
             break;
           case "auth/too-many-requests":
-            setError("Demasiados intentos. Intenta de nuevo más tarde.");
+            setError(t('login.19'));
             break;
           case "auth/operation-not-allowed":
-            setError("El registro con correo no está habilitado.");
+            setError(t('login.20'));
             break;
           default:
-            setError("Error al registrar usuario. Intenta más tarde.");
+            setError(t('login.21'));
         }
       } else {
-        setError("Error inesperado. Intenta más tarde.");
+        setError(t('login.22'));
       }
     } finally {
       setLoading(false);
@@ -77,14 +79,14 @@ const Register: React.FC = () => {
     <div className="dark:text-black dark:bg-gray-200 bg-[url(/img/backgroundFigma.png)] bg-cover bg-center backdrop-blur-md flex justify-center items-center min-h-screen w-full">
       <div className="bg-white rounded-xl p-8 flex flex-col items-center w-[400px] max-w-full">
         <img src="img/logo-sequentia.png" alt="Logo Sequentia" className="mb-12 w-[300px]" />
-        <h2 className="text-2xl font-extrabold text-center text-[#104A67] mb-6">Crear cuenta</h2>
+        <h2 className="text-2xl font-extrabold text-center text-[#104A67] mb-6">{t('login.23')}</h2>
 
         {error && <p className="text-red-600 mb-4">{error}</p>}
 
         <form onSubmit={handleRegister} className="flex flex-col items-center w-full">
           <input
             type="email"
-            placeholder="Correo"
+            placeholder={t('login.02')}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -93,7 +95,7 @@ const Register: React.FC = () => {
 
           <input
             type="password"
-            placeholder="Contraseña"
+            placeholder={t('login.03')}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
@@ -102,7 +104,7 @@ const Register: React.FC = () => {
 
           <input
             type="password"
-            placeholder="Repetir contraseña"
+            placeholder={t('login.24')}
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
             required
@@ -118,13 +120,13 @@ const Register: React.FC = () => {
               required
             />
             <span className="leading-snug text-gray-400 font-semibold">
-              He leído y acepto las{" "}
+              {t('login.25')}{" "}
               <Link to="/terms" className="text-[#104A67] no-underline">
-                condiciones generales de contratación
+                {t('login.26')}
               </Link>{" "}
               y la{" "}
               <Link to="/privacy" className="text-[#104A67] no-underline">
-                política de privacidad
+                {t('login.28')}
               </Link>.
             </span>
           </div>
@@ -136,7 +138,7 @@ const Register: React.FC = () => {
               onChange={() => setWantsPromos(!wantsPromos)}
               className="mr-2"
             />
-            Quiero recibir novedades y promociones de Sequentia.
+            {t('login.29')}
           </label>
 
           <button
@@ -148,15 +150,15 @@ const Register: React.FC = () => {
                 : "bg-[#E9D04A] hover:bg-blue-700"
             }`}
           >
-            {loading ? "Registrando..." : "Siguiente"}
+            {loading ? t('login.33') : t('login.32')}
           </button>
         </form>
 
         <div className="mt-6 text-center font-semibold text-gray-400">
           <p>
-            ¿Ya tienes cuenta?{" "}
+            {t('login.30')}{" "}
             <Link to="/login" className="text-[#104A67] no-underline">
-              Inicia sesión
+              {t('login.31')}
             </Link>
           </p>
         </div>

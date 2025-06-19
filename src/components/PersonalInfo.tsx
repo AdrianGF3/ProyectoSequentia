@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { auth, db } from "../firebaseConfig";
 import { doc, setDoc } from "firebase/firestore";
+import { useTranslation } from 'react-i18next';
 
 const PersonalInfo: React.FC = () => {
+    const { t } = useTranslation();
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [username, setUsername] = useState("");
@@ -33,7 +35,7 @@ const PersonalInfo: React.FC = () => {
             !city.trim() ||
             !postalCode.trim()
         ) {
-            setError("Por favor, completa todos los campos antes de continuar.");
+            setError(t('login.34'));
             return;
         }
 
@@ -42,7 +44,7 @@ const PersonalInfo: React.FC = () => {
 
             // Debug: verificar si el usuario está autenticado
             if (!user) {
-                setError("Usuario no autenticado.");
+                setError(t('login.35'));
                 console.error("auth.currentUser es null. El usuario no está logueado.");
                 return;
             }
@@ -84,10 +86,10 @@ const PersonalInfo: React.FC = () => {
         <div className="dark:text-black dark:bg-gray-200 bg-[url(/img/backgroundFigma.png)] bg-cover bg-center backdrop-blur-md flex justify-center items-center min-h-screen w-full">
             <div className="bg-white rounded-xl p-8 flex flex-col items-center w-[400px] max-w-full">
                 <h2 className="text-2xl font-extrabold text-center text-[#104A67] mb-6">
-                    Casi hemos terminado
+                    {t('login.37')}
                 </h2>
                 <h3 className="text-xl font-semibold text-center text-gray-600 mb-4">
-                    Datos personales
+                    {t('login.38')}
                 </h3>
 
                 {error && <p className="text-red-600 mb-4">{error}</p>}
@@ -95,21 +97,21 @@ const PersonalInfo: React.FC = () => {
                 <form onSubmit={handleSubmit} className="flex flex-col w-full">
                     <input
                         type="text"
-                        placeholder="Nombre"
+                        placeholder={t('login.39')}
                         value={firstName}
                         onChange={(e) => setFirstName(e.target.value)}
                         className="mb-3 px-4 py-2 border rounded-xl border-gray-300"
                     />
                     <input
                         type="text"
-                        placeholder="Apellido"
+                        placeholder={t('login.40')}
                         value={lastName}
                         onChange={(e) => setLastName(e.target.value)}
                         className="mb-3 px-4 py-2 border rounded-xl border-gray-300"
                     />
                     <input
                         type="text"
-                        placeholder="Nombre de usuario"
+                        placeholder={t('login.41')}
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
                         className="mb-3 px-4 py-2 border rounded-xl border-gray-300"
@@ -124,7 +126,7 @@ const PersonalInfo: React.FC = () => {
                         />
                         <input
                             type="tel"
-                            placeholder="Número de teléfono"
+                            placeholder={t('login.42')}
                             value={phoneNumber}
                             onChange={(e) => setPhoneNumber(e.target.value)}
                             className="flex-1 px-4 py-2 border rounded-xl border-gray-300"
@@ -132,28 +134,28 @@ const PersonalInfo: React.FC = () => {
                     </div>
                     <input
                         type="text"
-                        placeholder="País"
+                        placeholder={t('login.43')}
                         value={country}
                         onChange={(e) => setCountry(e.target.value)}
                         className="mb-3 px-4 py-2 border rounded-xl border-gray-300"
                     />
                     <input
                         type="text"
-                        placeholder="Provincia"
+                        placeholder={t('login.44')}
                         value={province}
                         onChange={(e) => setProvince(e.target.value)}
                         className="mb-3 px-4 py-2 border rounded-xl border-gray-300"
                     />
                     <input
                         type="text"
-                        placeholder="Ciudad"
+                        placeholder={t('login.45')}
                         value={city}
                         onChange={(e) => setCity(e.target.value)}
                         className="mb-3 px-4 py-2 border rounded-xl border-gray-300"
                     />
                     <input
                         type="text"
-                        placeholder="Código Postal"
+                        placeholder={t('login.46')}
                         value={postalCode}
                         onChange={(e) => setPostalCode(e.target.value)}
                         className="mb-6 px-4 py-2 border rounded-xl border-gray-300"
@@ -163,7 +165,7 @@ const PersonalInfo: React.FC = () => {
                         type="submit"
                         className="font-semibold text-lg py-3 px-10 bg-[#E9D04A] text-[#104A67] hover:bg-blue-700 focus:outline-none focus:ring-2 rounded-xl focus:ring-blue-500 self-end"
                     >
-                        Crear cuenta
+                        {t('login.47')}
                     </button>
                 </form>
             </div>
